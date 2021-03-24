@@ -20,6 +20,20 @@ public class Bibliotecario {
     private String login;
     private String senha;
 
+    public Bibliotecario(String nome, String cpf, String telefone, Date dataDeNascimento, String login, String senha) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.dataDeNascimento = dataDeNascimento;
+        this.login = login;
+        this.senha = senha;
+    }
+
+    public Bibliotecario() {
+    }
+    
+    
+
     public int getId_bibliotecario() {
         return id_bibliotecario;
     }

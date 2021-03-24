@@ -20,6 +20,7 @@ public class main {
     
     public static String identificacao = null;
     public static Aluno alunoEditar = new Aluno();
+    public static Bibliotecario bibliotecarioEditar = new Bibliotecario();
     public static Editora editoraEditar = new Editora();
     public static Categoria categoriaEditar = new Categoria();
     public static Obra obraEditar = new Obra();

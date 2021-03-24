@@ -97,7 +97,7 @@ public class EditarAluno extends javax.swing.JFrame {
             }
         });
 
-        jBAtualizar.setText("Atualizar");
+        jBAtualizar.setText("Editar");
         jBAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBAtualizarActionPerformed(evt);

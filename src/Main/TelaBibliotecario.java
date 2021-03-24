@@ -47,6 +47,7 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         inserirNaTabelaEditora();
         inserirNaTabelaCategoria();
         inserirNaTabelaObra();
+        inserirNaTabelaBibliotecario();
         atualizarSituacao();
         inserirNaTabelaSolicacoes();
         configurarTabelaSituacoes();
@@ -114,6 +115,12 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jTFProcurarCategoria = new javax.swing.JTextField();
         jLLupaCategoria = new javax.swing.JLabel();
         jBEditarCategoria = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTbBibliotecario = new javax.swing.JTable();
+        jBCadastrarBibliotecario = new javax.swing.JButton();
+        jBRemoverBibliotecario = new javax.swing.JButton();
+        jBEditarBibliotecario = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTbSolicitacoes = new javax.swing.JTable();
@@ -705,6 +712,89 @@ public class TelaBibliotecario extends javax.swing.JFrame {
 
         jTPSolicitacoes.addTab("Categorias", jPanel4);
 
+        jPanel8.setBackground(new java.awt.Color(255, 204, 102));
+
+        jTbBibliotecario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nome", "Login"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane8.setViewportView(jTbBibliotecario);
+
+        jBCadastrarBibliotecario.setText("Cadastrar");
+        jBCadastrarBibliotecario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBCadastrarBibliotecario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCadastrarBibliotecarioActionPerformed(evt);
+            }
+        });
+
+        jBRemoverBibliotecario.setText("Remover");
+        jBRemoverBibliotecario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBRemoverBibliotecario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRemoverBibliotecarioActionPerformed(evt);
+            }
+        });
+
+        jBEditarBibliotecario.setText("Editar");
+        jBEditarBibliotecario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEditarBibliotecarioActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jBRemoverBibliotecario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBEditarBibliotecario)
+                .addGap(95, 95, 95)
+                .addComponent(jBCadastrarBibliotecario)
+                .addGap(70, 70, 70))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jBRemoverBibliotecario)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jBCadastrarBibliotecario)
+                        .addComponent(jBEditarBibliotecario)))
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+
+        jTPSolicitacoes.addTab("Bibliotecario", jPanel8);
+
         jPanel6.setBackground(new java.awt.Color(255, 204, 102));
 
         jTbSolicitacoes.setModel(new javax.swing.table.DefaultTableModel(
@@ -881,7 +971,7 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         Connection con = Conexao.AbrirConexao();
         int qtd = new LivroDAO(con).receberLivrosPedentes();
         
-        jTPSolicitacoes.setTitleAt(5,"Solicitaçoes ("+qtd+")");
+        jTPSolicitacoes.setTitleAt(6,"Solicitaçoes ("+qtd+")");
 
         
     }
@@ -892,6 +982,10 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jTbLivros.getColumnModel().getColumn(0).setPreferredWidth(100);
         jTbLivros.getColumnModel().getColumn(1).setPreferredWidth(300);
         jTbLivros.getColumnModel().getColumn(2).setPreferredWidth(25);
+        
+        jTbBibliotecario.getColumnModel().getColumn(0).setPreferredWidth(50);
+        jTbBibliotecario.getColumnModel().getColumn(1).setPreferredWidth(275);
+        jTbBibliotecario.getColumnModel().getColumn(2).setPreferredWidth(275);
        
       
         jTbAluno.getColumnModel().getColumn(0).setPreferredWidth(100);
@@ -952,6 +1046,27 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         Conexao.FehcarConexao(con);
     }
      
+    private void inserirNaTabelaBibliotecario() throws SQLException{
+        Connection con = Conexao.AbrirConexao();
+        BibliotecarioDAO bd = new BibliotecarioDAO(con);
+        List<Bibliotecario> lista = new ArrayList<>();
+        lista = bd.listarBibliotecario();
+        DefaultTableModel tbm=
+                    (DefaultTableModel) jTbBibliotecario.getModel();
+        while(tbm.getRowCount() > 0 ){
+            tbm.removeRow(0);
+        }
+        int i=0;
+        for(Bibliotecario tab : lista){
+            tbm.addRow(new String[i]);
+            jTbBibliotecario.setValueAt(tab.getId_bibliotecario(), i, 0);
+            jTbBibliotecario.setValueAt(tab.getNome(), i, 1);
+            jTbBibliotecario.setValueAt(tab.getLogin(), i, 2);
+            i++;
+        }
+        Conexao.FehcarConexao(con);
+    }
+    
     
     private void inserirNaTabelaAluno() throws SQLException{
         Connection con = Conexao.AbrirConexao();
@@ -1431,6 +1546,49 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jBRecusarActionPerformed
 
+    private void jBEditarBibliotecarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEditarBibliotecarioActionPerformed
+        if(jTbBibliotecario.getSelectedRowCount() == 0)
+            JOptionPane.showMessageDialog(null, "Selecione uma linha",null,JOptionPane.ERROR_MESSAGE);
+        else if(jTbBibliotecario.getSelectedRowCount() > 1)
+            JOptionPane.showMessageDialog(null, "Selecione apenas uma linha",null,JOptionPane.ERROR_MESSAGE);
+        else{
+            Connection con = Conexao.AbrirConexao();
+            try {
+                main.bibliotecarioEditar = new BibliotecarioDAO(con).receberBibliotecario((Integer)jTbBibliotecario.getValueAt(jTbBibliotecario.getSelectedRow(), 0));
+            } catch (SQLException ex) {
+                Logger.getLogger(TelaBibliotecario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            new EditarBibliotecario().setVisible(true);
+            this.dispose();
+        } 
+    }//GEN-LAST:event_jBEditarBibliotecarioActionPerformed
+
+    private void jBRemoverBibliotecarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRemoverBibliotecarioActionPerformed
+        if(jTbBibliotecario.getSelectedRowCount() == 0)
+            JOptionPane.showMessageDialog(null, "Selecione uma linha",null,JOptionPane.ERROR_MESSAGE);
+        else if(jTbBibliotecario.getSelectedRowCount() > 1)
+            JOptionPane.showMessageDialog(null, "Selecione apenas uma linha",null,JOptionPane.ERROR_MESSAGE);
+        else if(main.bibLogado.getId_bibliotecario() == (Integer)jTbBibliotecario.getValueAt(jTbBibliotecario.getSelectedRow(), 0))
+            JOptionPane.showMessageDialog(null, "Não pode remover o Bibliotecario que está logado!",null,JOptionPane.ERROR_MESSAGE);  
+        else{
+            if(JOptionPane.showConfirmDialog(null,"Deseja remover o Bibliotecario "+jTbBibliotecario.getValueAt(jTbBibliotecario.getSelectedRow(), 1)+" ?") == 0){
+                Connection con = Conexao.AbrirConexao();
+                try {
+                    new BibliotecarioDAO(con).removerBibliotecario((Integer)jTbBibliotecario.getValueAt(jTbBibliotecario.getSelectedRow(), 0));
+                JOptionPane.showMessageDialog(null, "Bibliotecario removido com sucesso.");
+                inserirNaTabelaBibliotecario();
+                 } catch (SQLException ex) {
+                    Logger.getLogger(TelaBibliotecario.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }//GEN-LAST:event_jBRemoverBibliotecarioActionPerformed
+
+    private void jBCadastrarBibliotecarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarBibliotecarioActionPerformed
+        new CadastroBibliotecario().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jBCadastrarBibliotecarioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1475,15 +1633,18 @@ public class TelaBibliotecario extends javax.swing.JFrame {
     private javax.swing.JButton jBAceitar;
     private javax.swing.JButton jBCadastrar;
     private javax.swing.JButton jBCadastrar1;
+    private javax.swing.JButton jBCadastrarBibliotecario;
     private javax.swing.JButton jBCadastrarCategoria;
     private javax.swing.JButton jBCadastrarEditora;
     private javax.swing.JButton jBCadastrarObra;
     private javax.swing.JButton jBEditarAluno;
+    private javax.swing.JButton jBEditarBibliotecario;
     private javax.swing.JButton jBEditarCategoria;
     private javax.swing.JButton jBEditarEditora;
     private javax.swing.JButton jBEditarObra;
     private javax.swing.JButton jBRecusar;
     private javax.swing.JButton jBRemoverAluno;
+    private javax.swing.JButton jBRemoverBibliotecario;
     private javax.swing.JButton jBRemoverCategoria;
     private javax.swing.JButton jBRemoverEditora;
     private javax.swing.JButton jBRemoverLivro;
@@ -1513,12 +1674,14 @@ public class TelaBibliotecario extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTextField jTFProcurarAluno;
     private javax.swing.JTextField jTFProcurarCategoria;
     private javax.swing.JTextField jTFProcurarEditora;
@@ -1526,6 +1689,7 @@ public class TelaBibliotecario extends javax.swing.JFrame {
     private javax.swing.JTextField jTFProcurarObra;
     private javax.swing.JTabbedPane jTPSolicitacoes;
     private javax.swing.JTable jTbAluno;
+    private javax.swing.JTable jTbBibliotecario;
     private javax.swing.JTable jTbCategoria;
     private javax.swing.JTable jTbEditora;
     private javax.swing.JTable jTbLivros;
