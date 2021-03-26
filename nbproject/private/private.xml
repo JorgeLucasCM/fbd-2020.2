@@ -7,6 +7,7 @@
             <file>file:/D:/Documentos/NetBeans/SysBib/src/view/EditarAluno.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/view/EditarCategoria.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/view/CadastroObra.java</file>
+            <file>file:/D:/Documentos/NetBeans/SysBib/src/view/CadastroEditora.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/DAO/EditoraDAO.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/DAO/LivroDAO.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/view/CadastroLivro.java</file>
@@ -14,11 +15,13 @@
             <file>file:/D:/Documentos/NetBeans/SysBib/src/view/VisualizarAluno.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/Main/telaLogin.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/DAO/EmprestimoDAO.java</file>
+            <file>file:/D:/Documentos/NetBeans/SysBib/src/view/CadastroBibliotecario.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/DAO/BibliotecarioDAO.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/view/CadastroAluno.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/model/Editora.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/DAO/ExecuteSQL.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/view/CadastroCategoria.java</file>
+            <file>file:/D:/Documentos/NetBeans/SysBib/src/model/Bibliotecario.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/DAO/Conexao.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/DAO/ObraDAO.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/model/Livro.java</file>
@@ -29,6 +32,7 @@
             <file>file:/D:/Documentos/NetBeans/SysBib/src/model/Emprestimo.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/view/VisualizarObra.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/Main/main.java</file>
+            <file>file:/D:/Documentos/NetBeans/SysBib/src/view/EditarBibliotecario.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/Main/TelaBibliotecario.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/model/Obra.java</file>
             <file>file:/D:/Documentos/NetBeans/SysBib/src/view/EditarEditora.java</file>

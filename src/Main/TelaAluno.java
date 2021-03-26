@@ -57,10 +57,6 @@ public class TelaAluno extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTbLivros = new javax.swing.JTable();
         jBAlugar = new javax.swing.JButton();
-        jLProcurar = new javax.swing.JLabel();
-        jCBLivro = new javax.swing.JComboBox<>();
-        jTFProcurarLivro = new javax.swing.JTextField();
-        jLLupaLivro = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTbEmprestimos = new javax.swing.JTable();
@@ -110,34 +106,13 @@ public class TelaAluno extends javax.swing.JFrame {
             }
         });
 
-        jLProcurar.setText("Procurar:");
-
-        jCBLivro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione ...", "Título", "Descrição" }));
-
-        jLLupaLivro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/lupa.png"))); // NOI18N
-        jLLupaLivro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLLupaLivro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLLupaLivroMouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLProcurar)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTFProcurarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLLupaLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCBLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(232, 232, 232)
@@ -147,16 +122,9 @@ public class TelaAluno extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTFProcurarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLProcurar)
-                        .addComponent(jCBLivro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLLupaLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(jBAlugar)
                 .addGap(30, 30, 30))
         );
@@ -435,20 +403,6 @@ public class TelaAluno extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jBAlugarActionPerformed
 
-    private void jLLupaLivroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLupaLivroMouseClicked
-        limparTabelaLivro();
-        if(jTFProcurarLivro.getText().equals(""))
-            try {
-                inserirNaTabelaLivro();
-        } catch (SQLException ex) {
-            Logger.getLogger(TelaAluno.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        else if(jCBLivro.getSelectedItem().equals("Selecione ..."))
-            JOptionPane.showMessageDialog(null, "Selecione uma opção",null,JOptionPane.ERROR_MESSAGE);
-        else
-            inserirNaTabelaLivroCom();
-    }//GEN-LAST:event_jLLupaLivroMouseClicked
-
     private void jBDevolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDevolverActionPerformed
         if(jTbEmprestimos.getSelectedRowCount() == 0)
             JOptionPane.showMessageDialog(null, "Selecione uma linha",null,JOptionPane.ERROR_MESSAGE);
@@ -551,16 +505,12 @@ public class TelaAluno extends javax.swing.JFrame {
     private javax.swing.JButton jBAlugar;
     private javax.swing.JButton jBDevolver;
     private javax.swing.JButton jBRenovar;
-    private javax.swing.JComboBox<String> jCBLivro;
     private javax.swing.JLabel jLBemVindo;
-    private javax.swing.JLabel jLLupaLivro;
-    private javax.swing.JLabel jLProcurar;
     private javax.swing.JLabel jLSair;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTFProcurarLivro;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTable jTbEmprestimos;
     private javax.swing.JTable jTbLivros;

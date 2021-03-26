@@ -69,10 +69,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jTbObra = new javax.swing.JTable();
         jBCadastrarObra = new javax.swing.JButton();
         jBRemoverObra = new javax.swing.JButton();
-        jLProcurar2 = new javax.swing.JLabel();
-        jCBObra = new javax.swing.JComboBox<>();
-        jTFProcurarObra = new javax.swing.JTextField();
-        jLLupaObra = new javax.swing.JLabel();
         jBEditarObra = new javax.swing.JButton();
         jBVisualizarObra = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -80,10 +76,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jTbLivros = new javax.swing.JTable();
         jBCadastrar = new javax.swing.JButton();
         jBRemoverLivro = new javax.swing.JButton();
-        jLProcurar = new javax.swing.JLabel();
-        jCBLivro = new javax.swing.JComboBox<>();
-        jTFProcurarLivro = new javax.swing.JTextField();
-        jLLupaLivro = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jBRemoverAluno = new javax.swing.JButton();
         jCBAluno = new javax.swing.JComboBox<>();
@@ -100,20 +92,12 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jTbEditora = new javax.swing.JTable();
         jBCadastrarEditora = new javax.swing.JButton();
         jBRemoverEditora = new javax.swing.JButton();
-        jLProcurar4 = new javax.swing.JLabel();
-        jCBEditora = new javax.swing.JComboBox<>();
-        jTFProcurarEditora = new javax.swing.JTextField();
-        jLLupaEditora = new javax.swing.JLabel();
         jBEditarEditora = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTbCategoria = new javax.swing.JTable();
         jBCadastrarCategoria = new javax.swing.JButton();
         jBRemoverCategoria = new javax.swing.JButton();
-        jLProcurar3 = new javax.swing.JLabel();
-        jCBCategorai = new javax.swing.JComboBox<>();
-        jTFProcurarCategoria = new javax.swing.JTextField();
-        jLLupaCategoria = new javax.swing.JLabel();
         jBEditarCategoria = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane8 = new javax.swing.JScrollPane();
@@ -178,18 +162,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
             }
         });
 
-        jLProcurar2.setText("Procurar:");
-
-        jCBObra.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione ...", "Título", "Descrição" }));
-
-        jLLupaObra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/lupa.png"))); // NOI18N
-        jLLupaObra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLLupaObra.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLLupaObraMouseClicked(evt);
-            }
-        });
-
         jBEditarObra.setText("Editar");
         jBEditarObra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,23 +182,14 @@ public class TelaBibliotecario extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLProcurar2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTFProcurarObra, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLLupaObra, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCBObra, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jScrollPane3)
                 .addContainerGap())
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
                 .addComponent(jBRemoverObra)
                 .addGap(32, 32, 32)
                 .addComponent(jBVisualizarObra)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(jBEditarObra)
                 .addGap(47, 47, 47)
                 .addComponent(jBCadastrarObra)
@@ -235,15 +198,8 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTFProcurarObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLProcurar2)
-                        .addComponent(jCBObra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLLupaObra, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -300,34 +256,13 @@ public class TelaBibliotecario extends javax.swing.JFrame {
             }
         });
 
-        jLProcurar.setText("Procurar:");
-
-        jCBLivro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione ...", "Título", "Descrição" }));
-
-        jLLupaLivro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/lupa.png"))); // NOI18N
-        jLLupaLivro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLLupaLivro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLLupaLivroMouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLProcurar)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTFProcurarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLLupaLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCBLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -339,15 +274,8 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTFProcurarLivro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLProcurar)
-                        .addComponent(jCBLivro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLLupaLivro, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBCadastrar)
@@ -533,18 +461,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
             }
         });
 
-        jLProcurar4.setText("Procurar:");
-
-        jCBEditora.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione ...", "Título", "Descrição" }));
-
-        jLLupaEditora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/lupa.png"))); // NOI18N
-        jLLupaEditora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLLupaEditora.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLLupaEditoraMouseClicked(evt);
-            }
-        });
-
         jBEditarEditora.setText("Editar");
         jBEditarEditora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -558,16 +474,7 @@ public class TelaBibliotecario extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLProcurar4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTFProcurarEditora, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLLupaEditora, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCBEditora, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
@@ -581,15 +488,8 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTFProcurarEditora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLProcurar4)
-                        .addComponent(jCBEditora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLLupaEditora, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBRemoverEditora)
@@ -644,18 +544,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
             }
         });
 
-        jLProcurar3.setText("Procurar:");
-
-        jCBCategorai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione ...", "Título", "Descrição" }));
-
-        jLLupaCategoria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/lupa.png"))); // NOI18N
-        jLLupaCategoria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLLupaCategoria.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLLupaCategoriaMouseClicked(evt);
-            }
-        });
-
         jBEditarCategoria.setText("Editar");
         jBEditarCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -669,16 +557,7 @@ public class TelaBibliotecario extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLProcurar3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTFProcurarCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLLupaCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCBCategorai, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
@@ -692,15 +571,8 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTFProcurarCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLProcurar3)
-                        .addComponent(jCBCategorai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLLupaCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBRemoverCategoria)
@@ -856,8 +728,8 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBAceitar)
@@ -1196,24 +1068,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jBCadastrarActionPerformed
 
-    private void jLLupaLivroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLupaLivroMouseClicked
-        limparTabelaLivro();
-        if(jTFProcurarLivro.getText().equals(""))
-            try {
-                inserirNaTabelaLivro();
-        } catch (SQLException ex) {
-            Logger.getLogger(TelaBibliotecario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        else if(jCBLivro.getSelectedItem().equals("Selecione ..."))
-            JOptionPane.showMessageDialog(null, "Selecione uma opção",null,JOptionPane.ERROR_MESSAGE);
-        else
-            try {
-                inserirNaTabelaLivroCom();
-        } catch (SQLException ex) {
-            Logger.getLogger(TelaBibliotecario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jLLupaLivroMouseClicked
-
     private void jBRemoverLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRemoverLivroActionPerformed
         if(jTbLivros.getSelectedRowCount() == 0)
             JOptionPane.showMessageDialog(null, "Selecione uma linha",null,JOptionPane.ERROR_MESSAGE);
@@ -1358,10 +1212,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jBRemoverObraActionPerformed
 
-    private void jLLupaObraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLupaObraMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLLupaObraMouseClicked
-
     private void jBEditarObraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEditarObraActionPerformed
        if(jTbObra.getSelectedRowCount() == 0)
             JOptionPane.showMessageDialog(null, "Selecione uma linha",null,JOptionPane.ERROR_MESSAGE);
@@ -1426,10 +1276,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jBRemoverCategoriaActionPerformed
 
-    private void jLLupaCategoriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLupaCategoriaMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLLupaCategoriaMouseClicked
-
     private void jBEditarCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEditarCategoriaActionPerformed
         if(jTbCategoria.getSelectedRowCount() == 0)
             JOptionPane.showMessageDialog(null, "Selecione uma linha",null,JOptionPane.ERROR_MESSAGE);
@@ -1470,10 +1316,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jBRemoverEditoraActionPerformed
-
-    private void jLLupaEditoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLLupaEditoraMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLLupaEditoraMouseClicked
 
     private void jBEditarEditoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEditarEditoraActionPerformed
         if(jTbEditora.getSelectedRowCount() == 0)
@@ -1652,21 +1494,9 @@ public class TelaBibliotecario extends javax.swing.JFrame {
     private javax.swing.JButton jBVisualizarAluno;
     private javax.swing.JButton jBVisualizarObra;
     private javax.swing.JComboBox<String> jCBAluno;
-    private javax.swing.JComboBox<String> jCBCategorai;
-    private javax.swing.JComboBox<String> jCBEditora;
-    private javax.swing.JComboBox<String> jCBLivro;
-    private javax.swing.JComboBox<String> jCBObra;
     private javax.swing.JLabel jLBemVindo;
     private javax.swing.JLabel jLLupaAluno;
-    private javax.swing.JLabel jLLupaCategoria;
-    private javax.swing.JLabel jLLupaEditora;
-    private javax.swing.JLabel jLLupaLivro;
-    private javax.swing.JLabel jLLupaObra;
-    private javax.swing.JLabel jLProcurar;
     private javax.swing.JLabel jLProcurar1;
-    private javax.swing.JLabel jLProcurar2;
-    private javax.swing.JLabel jLProcurar3;
-    private javax.swing.JLabel jLProcurar4;
     private javax.swing.JLabel jLSair;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -1683,10 +1513,6 @@ public class TelaBibliotecario extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JTextField jTFProcurarAluno;
-    private javax.swing.JTextField jTFProcurarCategoria;
-    private javax.swing.JTextField jTFProcurarEditora;
-    private javax.swing.JTextField jTFProcurarLivro;
-    private javax.swing.JTextField jTFProcurarObra;
     private javax.swing.JTabbedPane jTPSolicitacoes;
     private javax.swing.JTable jTbAluno;
     private javax.swing.JTable jTbBibliotecario;
